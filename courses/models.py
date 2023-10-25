@@ -1,7 +1,7 @@
 from django.db import models
 
 class Semester(models.Model):
-    name = models.CharField(64)
+    name = models.CharField(max_length=64)
     start_date = models.DateField()
     end_date = models.DateField()
 
@@ -19,7 +19,7 @@ class Course(models.Model):
     
 class Task(models.Model):
     name = models.CharField(max_length=255)
-    type = models.CharField(choices=[
+    type = models.CharField(max_length=64, choices=[
        ( "Assignment", "Assignment"),
        ("Reading", "Reading"),
        ("Quiz", "Quiz"),
