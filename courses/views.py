@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, UpdateView, ListView
+from django.views.generic import CreateView, UpdateView, ListView, DetailView
 from .forms import CourseForm
 from .models import Course
 
@@ -8,6 +8,9 @@ class CourseListView(ListView):
     template_name = "courses/courses.html"
     model = Course
 
+class CourseDetailView(DetailView):
+    template_name = "courses/course.html"
+    model = Course
 
 class CourseCreateView(CreateView):
     template_name = "courses/course_form.html"
