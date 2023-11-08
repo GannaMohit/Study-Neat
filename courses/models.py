@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Semester(models.Model):
     name = models.CharField(max_length=64)
@@ -16,6 +17,9 @@ class Course(models.Model):
 
     def __str__(self):
         return f"{self.number}"
+    
+    def get_absolute_url(self):
+        return reverse('courses')
     
 class Task(models.Model):
     name = models.CharField(max_length=255)
