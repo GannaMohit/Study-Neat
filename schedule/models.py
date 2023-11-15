@@ -1,5 +1,5 @@
 from django.db import models
-from courses.models import Task
+from tasks.models import Task
 
 # Create your models here.
 
