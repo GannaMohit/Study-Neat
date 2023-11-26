@@ -4,16 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'masters/css/layout.css' %}">
+    {% block link %}{% endblock %}
+    <script src="{% static 'masters/js/layout.js' %}"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="{% url 'courses' %}">Courses</a></li>
-            <li><a href="{% url 'tasks' %}">Tasks</a></li>
-        </ul>
+        <img src="{% static 'masters/svg/menu.svg' %}" alt="Menu" id="menu_icon" onclick="displayMenuMobile(this)">
+        <div id="menu_box">
+            <ul>
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'courses' %}">Courses</a></li>
+                <li><a href="{% url 'tasks' %}">Tasks</a></li>
+                <!-- TODO: Add schedule URL -->
+                <li><a href="">Schedule</a></li>
+            </ul>
+        </div>
+        <!-- TODO: Add logout URL -->
+        <a href=""><img src="{% static 'masters/svg/logout.svg' %}" alt="Logout" id="logout_icon"></a>
     </nav>
-    {% block body %}
-    {% endblock %}
+    <div id="body_div">
+        {% block body %}
+        {% endblock %}
+    </div>
 </body>
 </html>

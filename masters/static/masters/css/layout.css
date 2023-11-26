@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope');
+
+* {
+    padding: 0px;
+}
+  
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    background: #F9F9F9;
+}
+
+nav {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    background: #E5E9EF;
+}
+
+#menu_icon  {
+    align-self: center;
+    margin: 0;
+    margin-left: 5vw;
+    cursor: pointer;
+}
+
+#menu_box {
+    display: none;
+    position: absolute;
+    width: 80vw;
+    height: 90vh;
+    top: 10vh;
+    left: 0vw;
+    background: #FFFFFF;
+}
+
+#menu_box ul {
+    position: absolute;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#menu_box ul li, #menu_box ul li a {
+    display: flex;
+    width: 80vw;
+    height: 10vh;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #2D2D2D;
+}
+
+a:hover {
+    background: #F9F9F9;
+}
+
+#logout_icon {
+    position: absolute;
+    right: 0;
+    color: #2D2D2D;
+    align-self: center;
+    height: 10vh;
+}
+
+#body_div {
+    position: absolute;
+    top: 12vh;
+    left: 2vw;
+}
+
+label {
+    display: inline-flex;
+    width: 30%;
+    height: 40%;
+    height: 5vh;
+    font-family: "Manrope", sans-serif;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 5vh;
+    color: #2D2D2D;
+}
+
+input, textarea, select {
+    display: inline-flex;
+    width: 70%;
+    height: 40%;
+    font-family: "Manrope", sans-serif;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 400;
+    color: #2D2D2D;
+
+    border-radius: 5px;
+    border: 1px solid #2D2D2D;
+
+    background: #FFF;
+}
+
+textarea {
+    height: 80%;
+}
+
+form div {
+    display: flex;
+    width: 75vw;
+    height: 10vh;
+    align-items: center;
+}
+
+@media screen and (min-width: 750px) {
+    #menu_box {
+        display: flex !important;
+        left: 10vw;
+        position: absolute;
+        top: 0;
+        width: 80vw;
+        height: 10vh;
+        background: none;
+    }
+
+    #menu_box ul {
+        flex-direction: row;
+    }
+
+    #menu_box ul li {
+        width: 15vw;
+        height: 10vh;
+        margin-right: 5vw;
+    }
+  
+    #menu_icon {
+        display: none;
+    }
+
+    form div {
+        width: 40vw;
+    }
+}

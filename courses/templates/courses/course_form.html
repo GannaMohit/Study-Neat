@@ -1,11 +1,17 @@
 {% extends "masters/layout.html" %}
+{% load static %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'courses/css/course_form.css' %}">
+{% endblock %}
 
 {% block body %}
     <form action="{{ request.path }}" method="post">
         {% csrf_token %}
         {{ form.as_div }}
-        <!-- TODO: Change the URL to courses page instead of dashboard -->
-        <a href="{% url 'dashboard' %}"><button type="button">Cancel</button></a>
-        <button type="submit">Save</button>
+        <div>
+            <a href="{% url 'courses' %}"><button type="button">Cancel</button></a>
+            <button type="submit">Save</button>
+        </div>
     </form>
 {% endblock %}
