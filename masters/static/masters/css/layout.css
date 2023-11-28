@@ -110,6 +110,8 @@ input, textarea, select {
     border: 1px solid #2D2D2D;
 
     background: #FFF;
+    padding: 4px;
+    box-sizing: border-box;
 }
 
 textarea {
@@ -121,6 +123,33 @@ form div {
     width: 75vw;
     height: 10vh;
     align-items: center;
+}
+
+.cancel, .save {
+    width: 30vw;
+    height: 5vh;
+    font-family: "Manrope", sans-serif;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+
+    border-radius: 5px;
+    border: 0;
+
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+
+.cancel {
+    margin-right: 15vw;
+    background: #FF5050;
+}
+
+.save {
+    background: #50ff7c;
+    color: #2D2D2D;
 }
 
 @media screen and (min-width: 750px) {
@@ -151,4 +180,14 @@ form div {
     form div {
         width: 40vw;
     }
+
+    .cancel {
+        width: 15vw;
+        margin-right: 10vw;
+    }
+
+    .save {
+        width: 15vw;
+    }
+
 }

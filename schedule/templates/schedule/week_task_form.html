@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block link %}
-    <link rel="stylesheet" href="{% static 'courses/css/course_form.css' %}">
+
 {% endblock %}
 
 {% block body %}
@@ -10,6 +10,7 @@
         {% csrf_token %}
         {{ form.as_div }}
         <div>
+            <!-- TODO: Change from courses to schedule -->
             <a href="{% url 'courses' %}"><button type="button" class="cancel">Cancel</button></a>
             <button type="submit" class="save">Save</button>
         </div>
