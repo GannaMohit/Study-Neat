@@ -1,0 +1,47 @@
+table {
+    width: 80vw;
+    border-collapse: collapse;
+    margin-left: 2vw;
+    margin-bottom: 10vh;
+}
+
+tr {
+    height: 5vh;
+}
+
+table tbody tr {
+    border: 0;
+    border-bottom: 1px;
+    border-color: #797979;
+    border-style: solid;
+}
+
+table tbody td, table thead th {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.1vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #2D2D2D;
+    text-align: center;
+}
+
+table thead th {
+    text-align: center;
+    font-size: 2vh;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 750px) {
+    table {
+        width: 50vw;
+    }
+
+    table tbody td {
+        font-size: 2vh; 
+    }
+
+    table thead th {
+        font-size: 3vh;
+    }
+}

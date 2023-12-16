@@ -83,6 +83,18 @@ a:hover {
     left: 2vw;
 }
 
+h1 {
+    width: 80vh;
+    font-family: "Manrope", sans-serif;
+    font-size: 3.5vh;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    color: #2D2D2D;
+    margin-left: 2vw;
+    margin-bottom: 5vh;
+}
+
 label {
     display: inline-flex;
     width: 30%;
@@ -175,6 +187,11 @@ form div {
   
     #menu_icon {
         display: none;
+    }
+
+    h1 {
+        width: 50vw;
+        font-size: 5vh;
     }
 
     form div {

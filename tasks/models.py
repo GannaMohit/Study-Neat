@@ -10,6 +10,7 @@ class Task(models.Model):
        ("Quiz", "Quiz"),
        ("Exam", "Exam")
     ])
+    due_date = models.DateField()
     file = models.FileField(blank=True, null=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='tasks')
 
