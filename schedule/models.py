@@ -1,7 +1,15 @@
 from django.db import models
 from tasks.models import Task
+import datetime
 
 # Create your models here.
+
+def get_current_week():
+    today = datetime.date.today()
+    try:
+        return Week.objects.get(start_date__gte = today, end_date__lte = today)
+    except:
+        return None
 
 class Week(models.Model):
     number = models.IntegerField()
@@ -21,7 +29,7 @@ class Today_Task(models.Model):
 
 class Week_Task(models.Model):
     name = models.CharField(max_length=255)
-    week_number = models.ForeignKey(Week, on_delete=models.CASCADE, related_name='tasks')
+    week_number = models.ForeignKey(Week, on_delete=models.CASCADE, related_name='tasks', default=get_current_week)
     date = models.DateField()
     start_time = models.TimeField()
     end_time = models.TimeField()

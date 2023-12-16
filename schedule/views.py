@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import CreateView, UpdateView, ListView, DetailView
-from .models import Week_Task
+from .models import Week_Task, Week
 from .forms import WeekTaskForm
 
 # Create your views here.
-# class CourseListView(ListView):
-#     template_name = "courses/courses.html"
-#     model = Course
+class WeekListView(ListView):
+    template_name = "schedule/weeks.html"
+    model = Week
 
 # class CourseDetailView(DetailView):
 #     template_name = "courses/course.html"
