@@ -21,8 +21,7 @@
                 <li><a href="">Schedule</a></li>
             </ul>
         </div>
-        <!-- TODO: Add logout URL -->
-        <a href=""><img src="{% static 'masters/svg/logout.svg' %}" alt="Logout" id="logout_icon"></a>
+        <a href="{% url 'logout' %}"><img src="{% static 'masters/svg/logout.svg' %}" alt="Logout" id="logout_icon"></a>
     </nav>
     <div id="body_div">
         {% block body %}

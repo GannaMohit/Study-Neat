@@ -5,7 +5,7 @@
         {% csrf_token %}
         {{ form.as_div }}
         <!-- TODO: Change the URL to courses page instead of dashboard -->
-        <a href="{% url 'dashboard' %}"><button type="button">Cancel</button></a>
-        <button type="submit">Save</button>
+        <a href="{% url 'tasks' %}"><button type="button" class="cancel">Cancel</button></a>
+        <button type="submit" class="save">Save</button>
     </form>
 {% endblock %}
