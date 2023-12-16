@@ -10,6 +10,11 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <div id="body_div">
+        {% block body %}
+        {% endblock %}
+    </div>
+
     <nav>
         <img src="{% static 'masters/svg/menu.svg' %}" alt="Menu" id="menu_icon" onclick="displayMenuMobile(this)">
         <div id="menu_box">
@@ -17,14 +22,10 @@
                 <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
                 <li><a href="{% url 'courses' %}">Courses</a></li>
                 <li><a href="{% url 'tasks' %}">Tasks</a></li>
-                <li><a href="{% url 'weeks' %}">Schedule</a></li>
+                <li><a href="{% url 'week_tasks' %}">Schedule</a></li>
             </ul>
         </div>
         <a href="{% url 'logout' %}"><img src="{% static 'masters/svg/logout.svg' %}" alt="Logout" id="logout_icon"></a>
     </nav>
-    <div id="body_div">
-        {% block body %}
-        {% endblock %}
-    </div>
 </body>
 </html>

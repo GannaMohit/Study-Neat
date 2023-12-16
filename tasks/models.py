@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from courses.models import Course
 
 # Create your models here.
@@ -19,7 +20,10 @@ class Task(models.Model):
     estimated_time = models.IntegerField() #In Minutes
     priority = models.IntegerField()
 
-    completed = models.BooleanField()
+    completed = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.name}"
+    
+    def get_absolute_url(self):
+        return reverse('tasks')

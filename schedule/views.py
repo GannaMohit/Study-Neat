@@ -5,8 +5,8 @@ from .forms import WeekTaskForm
 
 # Create your views here.
 class WeekListView(ListView):
-    template_name = "schedule/weeks.html"
-    model = Week
+    template_name = "schedule/week_tasks.html"
+    model = Week_Task
 
 # class CourseDetailView(DetailView):
 #     template_name = "courses/course.html"

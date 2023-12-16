@@ -2,6 +2,7 @@ from django.db import models
 from tasks.models import Task
 from courses.models import Semester
 import datetime
+from django.urls import reverse
 
 # Create your models here.
 
@@ -38,3 +39,8 @@ class Week_Task(models.Model):
     end_time = models.TimeField()
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='week_task', blank=True, null=True)
 
+    def __str__(self):
+        return {self.name}
+    
+    def get_absolute_url(self):
+        return reverse('week_tasks')

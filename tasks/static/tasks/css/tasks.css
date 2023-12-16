@@ -8,7 +8,7 @@
     height: 5vh;
     margin-bottom: 3vh;
     font-family: "Manrope", sans-serif;
-    font-size: 3vh;
+    font-size: 2vh;
     font-weight: 600;
     font-style: normal;
     line-height: normal;
@@ -24,4 +24,10 @@
     margin-right: 2vw;
     background: none;
     border: #DD0000 solid 1px;
+}
+
+@media screen and (min-width: 750px) {
+    #body_div li {
+        font-size: 3vh;
+    }
 }

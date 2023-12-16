@@ -1,5 +1,5 @@
 #body_div ul {
-    width: 70vw;
+    width: 90vw;
     margin-top: 5vh;
     margin-bottom: 10vh;
 }
@@ -8,7 +8,7 @@
     height: 5vh;
     margin-bottom: 3vh;
     font-family: "Manrope", sans-serif;
-    font-size: 3vh;
+    font-size: 1.25vh;
     font-weight: 600;
     font-style: normal;
     line-height: normal;
@@ -24,4 +24,10 @@
     margin-right: 2vw;
     background: none;
     border: #DD0000 solid 1px;
+}
+
+@media screen and (min-width: 750px) {
+    #body_div li {
+        font-size: 2.25vh;
+    }
 }

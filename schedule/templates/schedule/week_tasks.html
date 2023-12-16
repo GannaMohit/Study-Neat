@@ -1,0 +1,19 @@
+{% extends "masters/layout.html" %}
+{% load static %}
+
+{% block link %} <link rel="stylesheet" href="{% static 'schedule/css/week_tasks.css' %}">{%  endblock %}
+
+{% block body %}
+    <h1>Schedule</h1>
+
+    <a href="{% url 'week_task_new' %}"><button type="button" class="save">New</button></a>
+
+    <ul>
+        {% for task in object_list %}
+            <a href="{% url 'week_task_edit' pk=task.pk %}"><li>{{ task.task.course.nickname }}: {{ task.name }} for {{ task.task.name }} on {{ task.date }} from {{ task.start_time }} to {{ task.end_time }}</li></a>
+        {% empty %}
+            <li style="border: 0">Nothing scheduled for this week yet!</li>
+        {% endfor %}
+    </ul>
+    
+{% endblock %}

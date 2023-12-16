@@ -7,11 +7,13 @@
     <h1>Courses</h1>
 
     <a href="{% url 'course_new' %}"><button type="button" class="save">New</button></a>
-    <a href="" ><button type="button" class="save">Link to Canvas</button></a>
+    <a href=""><button type="button" class="save">Link to Canvas</button></a>
 
     <ul>
         {% for course in object_list %}
             <a href="{% url 'course_edit' pk=course.pk %}"><li>{{ course.subject }} {{ course.number }}</li></a>
+        {% empty %}
+            <li style="border: 0">No courses yet!</li>
         {% endfor %}
     </ul>
     

@@ -1,5 +1,19 @@
 {% extends "masters/layout.html" %}
+{% load static %}
+
+{% block link %} <link rel="stylesheet" href="{% static 'tasks/css/tasks.css' %}">{%  endblock %}
 
 {% block body %}
-    {{ object_list }}
+    <h1>Tasks</h1>
+
+    <a href="{% url 'task_new' %}"><button type="button" class="save">New</button></a>
+
+    <ul>
+        {% for task in object_list %}
+            <a href="{% url 'task_edit' pk=task.pk %}"><li>{{ task.course.nickname }}: {{ task.name }} due {{ task.due_date }}</li></a>
+        {% empty %}
+            <li style="border: 0">No tasks yet!</li>
+        {% endfor %}
+    </ul>
+    
 {% endblock %}
