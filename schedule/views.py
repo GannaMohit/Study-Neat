@@ -17,7 +17,7 @@ class WeekTaskCreateView(CreateView):
     model = Week_Task
     form_class = WeekTaskForm
 
-# class CourseUpdateView(UpdateView):
-#     template_name = "courses/course_form.html"
-#     model = Course
-#     form_class = CourseForm
+class WeekTaskUpdateView(UpdateView):
+    template_name = "schedule/week_task_form.html"
+    model = Week_Task
+    form_class = WeekTaskForm
