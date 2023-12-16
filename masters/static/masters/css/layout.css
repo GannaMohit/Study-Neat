@@ -80,7 +80,7 @@ a:hover {
 #body_div {
     position: absolute;
     top: 12vh;
-    left: 2vw;
+    left: 5vw;
 }
 
 h1 {
@@ -91,7 +91,6 @@ h1 {
     font-weight: 800;
     line-height: normal;
     color: #2D2D2D;
-    margin-left: 2vw;
     margin-bottom: 5vh;
 }
 
@@ -187,6 +186,10 @@ form div {
   
     #menu_icon {
         display: none;
+    }
+
+    #body_div {
+        left: 5vw;
     }
 
     h1 {

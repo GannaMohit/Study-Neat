@@ -1,0 +1,24 @@
+#body_div ul {
+    width: 70vw;
+    margin-bottom: 10vh;
+    margin-left: 2vw;
+}
+
+#body_div li {
+    font-family: "Manrope", sans-serif;
+    font-size: 3vh;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    color: #2D2D2D;
+    border: 0;
+    border-bottom: 1px;
+    border-color: #797979;
+    border-style: solid;
+}
+
+.save {
+    margin-right: 2vw;
+    background: none;
+    border: #DD0000 solid 1px;
+}
