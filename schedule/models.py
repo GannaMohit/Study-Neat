@@ -1,5 +1,6 @@
 from django.db import models
 from tasks.models import Task
+from courses.models import Semester
 import datetime
 
 # Create your models here.
@@ -12,6 +13,7 @@ def get_current_week():
         return None
 
 class Week(models.Model):
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='weeks', default=get_current_week)
     number = models.IntegerField()
     start_date = models.DateField()
     end_date = models.DateField()
@@ -29,7 +31,7 @@ class Today_Task(models.Model):
 
 class Week_Task(models.Model):
     name = models.CharField(max_length=255)
-    week_number = models.ForeignKey(Week, on_delete=models.CASCADE, related_name='tasks', default=get_current_week)
+    week = models.ForeignKey(Week, on_delete=models.CASCADE, related_name='tasks', default=get_current_week)
     date = models.DateField()
     start_time = models.TimeField()
     end_time = models.TimeField()

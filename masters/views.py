@@ -8,7 +8,7 @@ class DashboardView(ListView):
     template_name = 'masters/dashboard.html'
     model = Week_Task
     week = get_current_week()
-    queryset = week.week_tasks.all() if week is not None else []
+    queryset = week.tasks.all() if week is not None else []
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
